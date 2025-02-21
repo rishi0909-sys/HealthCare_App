@@ -72,11 +72,25 @@ tl.to("#carousel",{
         }
     }
 })
+let grid1 = document.querySelector(".grids-1")
+let grid2 = document.querySelector(".grids-2")
+
+gsap.from(grid1,{
+    x:-1000,
+    opacity:0,
+    duration:0.7
+})
+
+
+
+
+
 let caraousel = document.querySelector("#carousel")
 caraousel.addEventListener("mouseenter",()=>{tl.pause()})
 caraousel.addEventListener("mouseleave",()=>{tl.play()})
 // tl.pause()
 let button = document.querySelector("button")
 button.addEventListener("click",()=>{
-    window.location = "./chat.html"
+    window.location = "./login.html"
 })
+

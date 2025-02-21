@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Narsingdi Health Care Hospital</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Background gradient */
+        body {
+            background: linear-gradient(to right, #005f8f, #62b0d3);
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container {
+            display: flex;
+            width: 80%;
+            justify-content: space-between;
+        }
+
+        .left-section {
+            flex: 1;
+            color: white;
+            padding: 20px;
+        }
+
+        .left-section h1 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+
+        .left-section p {
+            font-size: 1.2rem;
+        }
+
+        .right-section {
+            flex: 1;
+            background: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .right-section h2 {
+            text-align: center;
+            color: #005f8f;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        .btn-login {
+            width: 100%;
+            padding: 10px;
+            background-color: #005f8f;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+
+        .btn-login:hover {
+            background-color: #003e61;
+        }
+
+        .left-section img {
+            width: 80%;
+            margin-top: 20px;
+        }
+        .reg{
+            display: flex;
+            justify-content: space-between;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- Left section with image and text -->
+        <div class="left-section">
+            <h1>TO REQUEST FOR AN ONLINE APPOINTMENT</h1>
+            <p>PLEASE COMPLETE THE FORM BELOW AND CLICK THE "REQUEST" BUTTON.</p>
+            <!-- <img src="https://via.placeholder.com/300x200" alt="Doctor illustration"> -->
+        </div>
+
+        <!-- Right section with form -->
+        <div class="right-section">
+            <h2>Patient Login</h2>
+            <form>
+                <div class="form-group">
+                    <label for="email">Email-ID:</label>
+                    <input type="email" id="email" name="email" placeholder="enter email ID">
+                </div>
+
+                <div class="form-group">
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" placeholder="enter password">
+                </div>
+                <input type="checkbox" name="Rememeber" id=remember"">
+            <label for="radio">Remember Me</label>
+            <div class="reg">
+            <label for="Register">New Here?</label>
+            <a href="registration.html">Register</a>
+            </div>
+            <!-- <input type="submit" value="Login"> -->
+                <button type="submit" class="btn-login">Login</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
