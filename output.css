@@ -866,12 +866,6 @@
   .min-h-\[8vh\] {
     min-height: 8vh;
   }
-  .min-h-\[28v\] {
-    min-height: 28v;
-  }
-  .min-h-\[28vgh\] {
-    min-height: 28vgh;
-  }
   .min-h-\[28vh\] {
     min-height: 28vh;
   }
@@ -1605,9 +1599,6 @@
   .bg-red-500\/\[50\%\] {
     background-color: color-mix(in oklab, var(--color-red-500) 50%, transparent);
   }
-  .bg-red-800 {
-    background-color: var(--color-red-800);
-  }
   .-bg-conic {
     --tw-gradient-position: in oklab;
     background-image: conic-gradient(var(--tw-gradient-stops));
@@ -1797,6 +1788,15 @@
   }
   .pt-5 {
     padding-top: calc(var(--spacing) * 5);
+  }
+  .pt-8 {
+    padding-top: calc(var(--spacing) * 8);
+  }
+  .pt-9 {
+    padding-top: calc(var(--spacing) * 9);
+  }
+  .pt-10 {
+    padding-top: calc(var(--spacing) * 10);
   }
   .pl-2\.5 {
     padding-left: calc(var(--spacing) * 2.5);

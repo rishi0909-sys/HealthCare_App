@@ -59,7 +59,7 @@ gsap.from(".grids-2",{
         // markers:true
     }
 })
-gsap.to("#carousel",{
+tl.to("#carousel",{
     transform:'translateX(-300%)',
     duration:22,
     yoyo:true,
@@ -72,6 +72,10 @@ gsap.to("#carousel",{
         }
     }
 })
+let caraousel = document.querySelector("#carousel")
+caraousel.addEventListener("mouseenter",()=>{tl.pause()})
+caraousel.addEventListener("mouseleave",()=>{tl.play()})
+// tl.pause()
 let button = document.querySelector("button")
 button.addEventListener("click",()=>{
     window.location = "./chat.html"
