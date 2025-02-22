@@ -3,12 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./output.css">
-    <title>Document</title>
+    <title>Chatbot</title>
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
-    <div id="main" class="bg-amber-500 h-screen w-screen">
-
+<body class="flex items-center justify-center h-screen bg-gray-600">
+    <div class="flex flex-col max-w-[50vw] w-screen h-[80vh] border rounded-lg shadow-lg bg-white">
+        <div id="chatbox" class="flex-1 p-4 overflow-y-auto">
+            <div class="mb-2 p-2 rounded-lg max-w-xs bg-gray-200 text-gray-900">
+                Hello! How can I help you today?
+            </div>
+        </div>
+        <div class="p-2 border-t flex items-center gap-2">
+            <input id="userInput" type="text" class="flex-1 p-2 border rounded-lg focus:outline-none" placeholder="Type a message...">
+            <button onclick="sendMessage()" class="bg-blue-500 text-white px-4 py-2 rounded-lg">Send</button>
+        </div>
     </div>
+
+    <script>
+        function sendMessage() {
+            let inputField = document.getElementById("userInput");
+            let message = inputField.value.trim();
+            if (!message) return;
+            
+            let chatbox = document.getElementById("chatbox");
+            let userMessage = document.createElement("div");
+            userMessage.className = "mb-2 p-2 rounded-lg max-w-xs bg-blue-500 text-white self-end ml-auto";
+            userMessage.textContent = message;
+            chatbox.appendChild(userMessage);
+            inputField.value = "";
+            
+            setTimeout(() => {
+                let botMessage = document.createElement("div");
+                botMessage.className = "mb-2 p-2 rounded-lg max-w-xs bg-gray-200 text-gray-900";
+                botMessage.textContent = "I'm just a simple chatbot!"; 
+                chatbox.appendChild(botMessage);
+            }, 1000);
+        }
+    </script>
 </body>
 </html>

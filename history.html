@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chatbot History</title>
+    <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
+    rel="stylesheet"/>
+    <link rel="stylesheet" href="./output.css">
+</head>
+<body class="flex items-center justify-center h-screen bg-gray-600">
+    <div class="flex flex-col max-w-[60vw] w-full h-screen border rounded-lg shadow-2xl bg-white overflow-hidden">
+        <div class="p-4 text-lg font-semibold bg-gray-800 text-white text-center">Chatbot History</div>
+        <div id="historyBox" class="flex-1 p-4 overflow-y-auto bg-gray-100">
+            <!-- <p class="text-gray-500 text-center">No chat history available.</p> -->
+        </div>
+        <div class="p-2 border-t flex justify-between bg-white">
+            <a href="index.html" class="bg-lime-500 hover:bg-lime-700 transition text-white px-4 py-2 rounded-lg shadow">Back to Chat</a>
+            <button onclick="clearHistory()" class="bg-black  hover:bg-gray-700 transition text-white px-4 py-2 rounded-lg shadow"><i class="ri-close-line"></i></button>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            let history = localStorage.getItem("chatHistory");
+            let historyBox = document.getElementById("historyBox");
+            
+            if (history) {
+                historyBox.innerHTML = history;
+            }
+        });
+
+        function clearHistory() {
+            localStorage.removeItem("chatHistory");
+            document.getElementById("historyBox").innerHTML = "<p class='text-gray-500 text-center'>No chat history available.</p>";
+        }
+    </script>
+</body>
+</html>
