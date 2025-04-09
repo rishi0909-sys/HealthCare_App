@@ -1,6 +1,6 @@
 @media screen and  (max-width:450px){
     body{
-        width: 300vw;;
+        width: 320vw;
         overflow-x: hidden;
     }
     #navbar{
