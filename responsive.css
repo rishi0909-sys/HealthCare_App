@@ -1,0 +1,84 @@
+@media screen and  (max-width:420px){
+    body{
+        width: 300vw;;
+        overflow-x: hidden;
+    }
+    #navbar{
+        min-height: 100px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-width:300vw
+    }   
+    #navbar h1{
+        font-size: 40px;
+        margin-left: -30px;
+        /* font-weight: bolde; */
+    }
+    #landingpage{
+        /* background-color: red; */
+        width: 300vw;
+    }
+    #imagegird{
+        width: 300vw;
+        height: 50vh;
+        /* background-color:yellow; */
+    }
+    #image-container-1{
+        /* background-color: lime; */
+        width: 75vw;
+        height: 40vh;
+    }
+    #image-container-1 img{
+        /* background-color: lime; */
+        width: 100vw;
+        height: 140vh;
+    }
+    #image-container-2{
+        /* background-color: lime; */
+        width: 75vw;
+        height: 100vh;
+    }
+    #image-container-2 img{
+        /* background-color: lime; */
+        width: 100vw;
+        height: 140vh;
+    }
+    #image-container-3{
+        /* background-color: lime; */
+        width: 75vw;
+        height: 100vh;
+    }
+    #image-container-3 img{
+        /* background-color: lime; */
+        width: 100vw;
+        height: 140vh;
+    }
+    #image-container-4{
+        /* background-color: lime; */
+        width: 75vw;
+        height: 100vh;
+    }
+    #image-container-4 img{
+        /* background-color: lime; */
+        width: 100vw;
+        height: 140vh;
+    }
+    #content-grid{
+        
+        /* background-color: red; */
+        width: 300vw;
+    }
+    #heading-grid{
+        display: flex ;
+        /* background-color: lime; */
+        width: 300vw;
+        height:150px;
+    }
+    #content-grid h1{
+        font-size: 90px;
+        /* margin-left: -30px; */
+        /* font-weight: bolde; */
+    }
+    
+}

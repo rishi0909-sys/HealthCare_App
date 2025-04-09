@@ -14,31 +14,12 @@
             </div>
         </div>
         <div class="p-2 border-t flex items-center gap-2">
-            <input id="userInput" type="text" class="flex-1 p-2 border rounded-lg focus:outline-none" placeholder="Type a message...">
+            <input id="userInput" autocomplete="off" type="text" class="flex-1 p-2 border rounded-lg focus:outline-none" placeholder="Type a message...">
             <button onclick="sendMessage()" class="bg-blue-500 text-white px-4 py-2 rounded-lg">Send</button>
         </div>
     </div>
 
-    <script>
-        function sendMessage() {
-            let inputField = document.getElementById("userInput");
-            let message = inputField.value.trim();
-            if (!message) return;
-            
-            let chatbox = document.getElementById("chatbox");
-            let userMessage = document.createElement("div");
-            userMessage.className = "mb-2 p-2 rounded-lg max-w-xs bg-blue-500 text-white self-end ml-auto";
-            userMessage.textContent = message;
-            chatbox.appendChild(userMessage);
-            inputField.value = "";
-            
-            setTimeout(() => {
-                let botMessage = document.createElement("div");
-                botMessage.className = "mb-2 p-2 rounded-lg max-w-xs bg-gray-200 text-gray-900";
-                botMessage.textContent = "I'm just a simple chatbot!"; 
-                chatbox.appendChild(botMessage);
-            }, 1000);
-        }
+    <script src="./chat.js">
     </script>
 </body>
 </html>
